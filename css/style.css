@@ -93,18 +93,16 @@ hr {
 	color: gray;
 }
 
+.description {
+	padding: 0 20px;
+}
 .description p {
 	font-weight: 400;
-	margin: 10px 20px;
-
-}
-ul.options {
-	margin: 10px 50px;
 }
 ul.simple-list {
 	list-style-type: none;
+	margin-left: 0;
 }
-
 
 /*
 Labels
