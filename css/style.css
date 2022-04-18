@@ -1,0 +1,139 @@
+/*------------------------------------------------------------------
+Project:	CV Gris
+Version:	1.0
+Created: 		24/02/2013
+Last change:	24/02/2013
+-------------------------------------------------------------------*/
+
+body {
+	background-color: #E0E0E0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.footer {
+	padding: 20px 0;
+	text-align: center;
+	color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
+}
+
+.header {
+    background-color: #f0f0f0;
+    
+	border-bottom: 1px solid #dddddd;
+	box-shadow:  0 0 3px rgba(190, 190, 190, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+    z-index: 1030;
+	height: auto;
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+.header img {
+	float: left;
+	height: 85px;
+	margin-right: 15px;
+	padding: 11px;
+}
+
+.header li {
+    list-style-type: none;
+	padding: 4px 0;
+}
+   
+.header ul {
+	margin-top: 5px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.right-block {
+    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid #dddddd;
+	padding: 15px 25px;
+	margin: 10px 0;
+	position:relative;
+	border-radius: 15px;
+}
+
+.right-block .links {
+	text-align: right;
+}
+
+.right-block h4 {
+	word-wrap:break-word;
+}
+
+.right-column h3 {
+	font-weight: 300;
+	margin-left: 20px;
+}
+
+.project-info h2,
+.project-info h3,
+.project-info h4,
+.project-info h5,
+.project-info h6 {
+
+	font-weight: 800;
+	margin: 0 20px;
+}
+
+.project-info h6 {
+	color: gray;
+}
+
+.description p {
+	font-weight: 400;
+	margin: 10px 20px;
+
+}
+ul.options {
+	margin: 10px 50px;
+}
+ul.simple-list {
+	list-style-type: none;
+}
+
+
+/*
+Labels
+*/
+
+
+
+.label-small {
+    font-size: 0.6em;
+}
+
+.labels label {
+    margin: 2px 5px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+label.help {
+    color: #fff;
+    background-color: rgb(82, 196, 26);;
+}
+
+label.mvp {
+    color: #fff;
+    background-color: rgb(196, 137, 26);;
+}
+
+label.poc {
+    color: #fff;
+    background-color: rgb(103, 26, 196);;
+}
