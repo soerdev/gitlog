@@ -15,7 +15,7 @@ body {
 	padding: 20px 0;
 	text-align: center;
 	color: #f0f0f0;
-    background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 hr {
@@ -25,14 +25,14 @@ hr {
 }
 
 .header {
-    background-color: #f0f0f0;
-    
+	background-color: #f0f0f0;
+
 	border-bottom: 1px solid #dddddd;
-	box-shadow:  0 0 3px rgba(190, 190, 190, 0.75);
+	box-shadow: 0 0 3px rgba(190, 190, 190, 0.75);
 	top: 0;
 	right: 0;
 	left: 0;
-    z-index: 1030;
+	z-index: 1030;
 	height: auto;
 	padding: 20px 0;
 	margin-bottom: 20px;
@@ -46,23 +46,23 @@ hr {
 }
 
 .header li {
-    list-style-type: none;
+	list-style-type: none;
 	padding: 4px 0;
 }
-   
+
 .header ul {
 	margin-top: 5px;
-    margin-left: 0;
-    padding-left: 0;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 .right-block {
-    background-color: #f0f0f0;
-    background-color: rgba(255, 255, 255, 0.4);
+	background-color: #f0f0f0;
+	background-color: rgba(255, 255, 255, 0.4);
 	border: 1px solid #dddddd;
 	padding: 15px 25px;
 	margin: 10px 0;
-	position:relative;
+	position: relative;
 	border-radius: 15px;
 }
 
@@ -70,8 +70,13 @@ hr {
 	text-align: right;
 }
 
+.links span+span:before {
+	content: " | ";
+	padding: 0 10px;
+}
+
 .right-block h4 {
-	word-wrap:break-word;
+	word-wrap: break-word;
 }
 
 .right-column h3 {
@@ -98,9 +103,11 @@ hr {
 	margin: 10px 20px;
 
 }
+
 ul.options {
 	margin: 10px 50px;
 }
+
 ul.simple-list {
 	list-style-type: none;
 }
@@ -113,27 +120,41 @@ Labels
 
 
 .label-small {
-    font-size: 0.6em;
+	font-size: 0.6em;
 }
 
 .labels label {
-    margin: 2px 5px;
-    display: inline-block;
-    border-radius: 5px;
-    padding: 0px 10px;
+	margin: 2px 5px;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 0px 10px;
 }
 
 label.help {
-    color: #fff;
-    background-color: rgb(82, 196, 26);;
+	color: #fff;
+	background-color: rgb(82, 196, 26);
 }
 
 label.mvp {
-    color: #fff;
-    background-color: rgb(196, 137, 26);;
+	color: #fff;
+	background-color: rgb(196, 137, 26);
 }
 
 label.poc {
-    color: #fff;
-    background-color: rgb(103, 26, 196);;
+	color: #fff;
+	background-color: rgb(103, 26, 196);
+}
+
+.skeleton {
+	height: 360px;
+	background: #eee;
+	background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+	background-size: 200% 100%;
+	animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+	to {
+		background-position-x: -200%;
+	}
 }
