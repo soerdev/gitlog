@@ -98,20 +98,18 @@ hr {
 	color: gray;
 }
 
-.description p {
-	font-weight: 400;
-	margin: 10px 20px;
-
+.description {
+	padding: 0 20px;
 }
 
-ul.options {
-	margin: 10px 50px;
+.description p {
+	font-weight: 400;
 }
 
 ul.simple-list {
 	list-style-type: none;
+	margin-left: 0;
 }
-
 
 /*
 Labels
@@ -141,7 +139,7 @@ label.mvp {
 }
 
 label.poc {
-	color: #fff;
+	<<<<<<< HEAD color: #fff;
 	background-color: rgb(103, 26, 196);
 }
 
@@ -157,4 +155,17 @@ label.poc {
 	to {
 		background-position-x: -200%;
 	}
+
+	=======color: #fff;
+	background-color: rgb(103, 26, 196);
+	;
+}
+
+
+/*
+Icons
+ */
+
+.fa-youtube-play {
+	color: #c4302b >>>>>>> latest
 }
