@@ -139,7 +139,7 @@ label.mvp {
 }
 
 label.poc {
-	<<<<<<< HEAD color: #fff;
+	color: #fff;
 	background-color: rgb(103, 26, 196);
 }
 
@@ -155,17 +155,8 @@ label.poc {
 	to {
 		background-position-x: -200%;
 	}
-
-	=======color: #fff;
-	background-color: rgb(103, 26, 196);
-	;
 }
 
-
-/*
-Icons
- */
-
 .fa-youtube-play {
-	color: #c4302b >>>>>>> latest
+	color: #c4302b
 }

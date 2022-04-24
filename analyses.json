@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Angular",
+        "description": "Фреймворк для создания SPA",
+        "analyses": [
+            {
+                "name": "Чему можно научиться анализируя исходники Angular",
+                "url": "https://www.youtube.com/watch?v=d-CwChIAYqg",
+                "icon": "fa-youtube-play"
+            },
+            {
+                "name": "Angular2 Router: смотрю код, принцип \"коммиты рано, коммиты часто\"",
+                "url": "https://www.youtube.com/watch?v=bt2jY1voIOk",
+                "icon": "fa-youtube-play"
+            },
+            {
+                "name": "Разбираю Angular CSS Lexer",
+                "url": "https://www.youtube.com/watch?v=XMaR0JtQt-U",
+                "icon": "fa-youtube-play"
+            }
+        ]
+    },
+    [
+        {
+            "title": "NPM",
+            "analyses": [
+                {
+                    "name": "Анализирую NPM (начало)",
+                    "url": "https://www.youtube.com/watch?v=HHoRpOwXpDU",
+                    "icon": "fa-youtube-play"
+                }
+            ]
+        },
+        {
+            "title": "Streamlines",
+            "description": "Библиотека для создания кривых",
+            "analyses": [
+                {
+                    "name": "Анализ github проекта Streamlines #1: Алгоритм",
+                    "url": "https://www.youtube.com/watch?v=-EcUAGK0SpI",
+                    "icon": "fa-youtube-play"
+                },
+                {
+                    "name": "Анализ github проекта Streamlines #2: Математика отрисовки кривых",
+                    "url": "https://www.youtube.com/watch?v=Rgy6cFkDf2Q",
+                    "icon": "fa-youtube-play"
+                },
+                {
+                    "name": "Анализ github проекта Streamlines #3: Код",
+                    "url": "https://www.youtube.com/watch?v=9ChboUOY2Pw",
+                    "icon": "fa-youtube-play"
+                }
+            ]
+        }
+    ],
+    {
+        "title": "Redux",
+        "analyses": [
+            {
+                "name": "Анализ исходного кода Redux | Функциональная композиция | Middleware",
+                "url": "https://www.youtube.com/watch?v=ChFQMzfpYbI",
+                "icon": "fa-youtube-play"
+            }
+        ]
+    }
+]

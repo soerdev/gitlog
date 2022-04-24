@@ -3,15 +3,17 @@
    * @typedef Link
    * @property {String} name
    * @property {String} url
+   * @property {String} [icon]
    */
 
   /**
    * @typedef Project
    * @property {String} title
-   * @property {String} description
-   * @property {String[]} technologies
-   * @property {String[]} labels
-   * @property {Link[]} links
+   * @property {String} [description]
+   * @property {String[]} [technologies]
+   * @property {String[]} [labels]
+   * @property {Link[]} [links]
+   * @property {Link[]} [analyses]
    */
 
   const labelToClassMap = { Contribute: "help", MVP: "mvp", POC: "poc" };
@@ -30,8 +32,16 @@
         const spanWrapper = document.createElement("span");
 
         const linkElement = document.createElement("a");
-        linkElement.append(document.createTextNode(link.name));
+
+        linkElement.append(document.createTextNode(` ${link.name}`));
+        linkElement.target = "_blank";
         linkElement.href = link.url;
+
+        if (link.icon) {
+          const iconElement = document.createElement("i");
+          iconElement.className = `fa ${link.icon}`;
+          spanWrapper.append(iconElement);
+        }
 
         spanWrapper.append(linkElement);
 
@@ -39,6 +49,39 @@
       })
     );
     return linksBlock;
+  }
+
+  /**
+   *
+   * @param {Project['analyses']} analyses
+   * @returns {HTMLElement}
+   */
+  function buildAnalysesBlock(analyses) {
+    const analysesBlock = document.createElement("ul");
+    analysesBlock.classList.add("simple-list");
+
+    analysesBlock.append.apply(
+      analysesBlock,
+      analyses.map((analysis) => {
+        const analysisElement = document.createElement("li");
+
+        if (analysis.icon) {
+          const iconElement = document.createElement("i");
+          iconElement.className = `fa ${analysis.icon}`;
+          analysisElement.append(iconElement);
+        }
+
+        const linkElement = document.createElement("a");
+        linkElement.append(document.createTextNode(` ${analysis.name}`));
+        linkElement.target = "_blank";
+        linkElement.href = analysis.url;
+
+        analysisElement.append(linkElement);
+
+        return analysisElement;
+      })
+    );
+    return analysesBlock;
   }
   /**
    *
@@ -125,39 +168,56 @@
     titleElement.append(document.createTextNode(project.title));
     rightBlock.append(titleElement);
 
-    rightBlock.append.apply(rightBlock, buildDescription(project.description));
+    if (project.description)
+      rightBlock.append.apply(
+        rightBlock,
+        buildDescription(project.description)
+      );
 
-    rightBlock.append(buildTechnologiesBlock(project.technologies));
-    rightBlock.append(buildLabelsBlock(project.labels));
-    rightBlock.append(buildLinksBlock(project.links));
+    if (project.technologies && project.technologies.length)
+      rightBlock.append(buildTechnologiesBlock(project.technologies));
+    if (project.labels && project.labels.length)
+      rightBlock.append(buildLabelsBlock(project.labels));
+    if (project.links && project.links.length)
+      rightBlock.append(buildLinksBlock(project.links));
+    if (project.analyses && project.analyses.length)
+      rightBlock.append(buildAnalysesBlock(project.analyses));
 
     return rightBlock;
   }
 
-  const projectsResponse = await fetch("/projects.json");
-  /** @type {(Project | Project[])[]} */
-  const projects = await projectsResponse.json();
+  /**
+   *
+   * @param {string} blockName
+   */
+  async function buildBlock(blockName) {
+    const projectsResponse = await fetch(`/${blockName}.json`);
+    /** @type {(Project | Project[])[]} */
+    const projects = await projectsResponse.json();
 
-  const skeletons = document.querySelectorAll(".loading-project");
-  const firstSkeleton = skeletons[0];
+    const skeletons = document.querySelectorAll(`.loading-${blockName}`);
+    const firstSkeleton = skeletons[0];
 
-  for (const project of projects) {
-    const projectElement = document.createElement("div");
-    projectElement.classList.add("span3");
+    for (const project of projects) {
+      const projectElement = document.createElement("div");
+      projectElement.classList.add("span3");
 
-    if (Array.isArray(project)) {
-      projectElement.append.apply(
-        projectElement,
-        project.map(buildProjectNode)
-      );
-    } else {
-      projectElement.append(buildProjectNode(project));
+      if (Array.isArray(project)) {
+        projectElement.append.apply(
+          projectElement,
+          project.map(buildProjectNode)
+        );
+      } else {
+        projectElement.append(buildProjectNode(project));
+      }
+
+      firstSkeleton.insertAdjacentElement("beforebegin", projectElement);
     }
 
-    firstSkeleton.insertAdjacentElement("beforebegin", projectElement);
+    for (const skeleton of skeletons) {
+      skeleton.remove();
+    }
   }
 
-  for (const skeleton of skeletons) {
-    skeleton.remove();
-  }
+  await Promise.all(["projects", "analyses"].map(buildBlock));
 })();

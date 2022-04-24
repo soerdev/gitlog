@@ -19,6 +19,7 @@
             },
             {
                 "name": "GitHub",
+                "icon": "fa-brands fa-github",
                 "url": "https://github.com/soerdev/soer"
             }
         ]
@@ -37,7 +38,70 @@
         "links": [
             {
                 "name": "GitHub",
+                "icon": "fa-brands fa-github",
                 "url": "https://github.com/soerdev/obsoverlay"
+            }
+        ]
+    },
+    {
+        "title": "Elex",
+        "description": "Словарная оболочка с веб-интерфейсом. Создание, редактирование, конвертация словарей происходит отдельно (через командную строку). Файлы загружаются по SCP/SFTP на сервер в специальную папку. Это программа для частного пользования.\nРазыскиваются желающие улучшить программу. В частности на данный момент хотелось бы добавить routing для навигации по истории поиска (https://github.com/geniot/elex/issues/1).",
+        "technologies": [
+            "Java",
+            "Spring Boot",
+            "Angular"
+        ],
+        "labels": [
+            "Contribute",
+            "MVP",
+            "POC"
+        ],
+        "links": [
+            {
+                "name": "Web",
+                "url": "https://elex.mobi"
+            },
+            {
+                "name": "GitHub",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/geniot/elex"
+            }
+        ]
+    },
+    {
+        "title": "NtscQT",
+        "description": "Инструмент для стилизации фото и видео под старую VHS плёнку. Основан на алгоритме, максимально достоверно имитирующем аналоговый сигнал и выглядит аутентичнее существующих инструментов\nРазвиваю в свободное время, а в первую очередь хочется заняться оптимизацией и более гибкой настройкой",
+        "technologies": [
+            "Python",
+            "PyQT",
+            "NumPy",
+            "FFmpeg"
+        ],
+        "labels": [
+            "Contribute"
+        ],
+        "links": [
+            {
+                "name": "Web",
+                "url": "https://0hz.ru/ntscqt/"
+            },
+            {
+                "name": "GitHub",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/JargeZ/ntscqt"
+            }
+        ]
+    },
+    {
+        "title": "Твой проект может быть здесь",
+        "description": "Если ты создаешь OpenSource, то добро пожаловать в <a href=\"https://t.me/softwareengineervlog\">Телеграм сообщество</a><br><br>Если хочешь добавить на эту страницу информацию о своем проекте, то это можно сделать через Pull Request на GitHub",
+        "technologies": [],
+        "labels": [],
+        "links": [
+            {
+                "name": "GitHub",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/soerdev/gitlog"
             }
         ]
     }
