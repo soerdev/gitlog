@@ -94,6 +94,29 @@
                 "url": "https://github.com/JargeZ/ntscqt"
             }
         ]
+    },
+    {
+        "title": "Gitlab microservices bumper",
+        "description": "Модуль Terraform, предназначенный для организации релизного процесс в Gitlab при наличии большого количества микросервисов (репозиториев). Идея заключается в декларативном управлении отдельными ресурсам Gitlab (ветки, теги, релизы и т.д.) через сообщение тега целевого (core) проекта.\nВ настоящее время часть требуемых функциональных возможностей отсутствует на уровне провайдера, поэтому дополнительно требуется контрибьютить в проект <a href='https://github.com/gitlabhq/terraform-provider-gitlab/'>Gitlab Terraform provider</a>.\nПоддержку проекту можно оказать выполняя Issues.",
+        "technologies": [
+            "Terraform",
+            "Golang"
+        ],
+        "labels": [
+            "Contribute",
+            "MVP"
+        ],
+        "links": [
+            {
+                "name": "Terraform",
+                "url": "https://registry.terraform.io/modules/terraform-gitlab-modules/microservices-bumper/gitlab"
+            },
+            {
+                "name": "GitHub",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/terraform-gitlab-modules/terraform-gitlab-microservices-bumper"
+            }
+        ]
     }],
 
 
