@@ -95,6 +95,29 @@
             }
         ]
     }],
+    {
+        "title": "NJMA - NodeJsMyAdmin",
+        "description": "Страница администратора баз данных по примеру phpmyadmin. Проект на начальной стадии разработки, с минимумом подключаемых библиотек. В планах реализовать поддержку нескольких БД, сейчас пока MySQL.\nИдеи и критику буду рад прочесть в <a href='https://t.me/ogneyar_ya'>телеграм</a>.",
+        "technologies": [
+            "NodeJs",
+            "MySQL"
+        ],
+        "labels": [
+            "Contribute"
+        ],
+        "links": [
+            {
+                "name": "Telegram",
+                "icon": "fa-brands fa-telegram",
+                "url": "https://t.me/ogneyar_ya"
+            },
+            {
+                "name": "GitHub",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/ogneyar/NodeJsMyAdmin"
+            }
+        ]
+    }],
     [{
         "title": "Gitlab microservices bumper",
         "description": "Модуль Terraform, предназначенный для организации релизного процесс в Gitlab при наличии большого количества микросервисов (репозиториев). Идея заключается в декларативном управлении отдельными ресурсам Gitlab (ветки, теги, релизы и т.д.) через сообщение тега целевого (core) проекта.\nВ настоящее время часть требуемых функциональных возможностей отсутствует на уровне провайдера, поэтому дополнительно требуется контрибьютить в проект <a href='https://github.com/gitlabhq/terraform-provider-gitlab/'>Gitlab Terraform provider</a>.\nПоддержку проекту можно оказать выполняя Issues.",
